@@ -94,15 +94,15 @@ The possible false-positive indication is an investigation aid and is not presen
 
 
 
-\- Reduces the number of individual alerts an analyst needs to review at once.
+- Reduces the number of individual alerts an analyst needs to review at once.
 
-\- Makes incident prioritization explainable rather than showing an unexplained score.
+- Makes incident prioritization explainable rather than showing an unexplained score.
 
-\- Keeps supporting evidence and timelines close to the investigation.
+- Keeps supporting evidence and timelines close to the investigation.
 
-\- Provides standardized MITRE ATT&CK context.
+- Provides standardized MITRE ATT&CK context.
 
-\- Produces concise BLUF summaries for faster understanding and communication.
+- Produces concise BLUF summaries for faster understanding and communication.
 
 
 
@@ -119,5 +119,6 @@ It does not currently connect to real SIEM systems, live threat feeds, military 
 
 
 In a future production implementation, the same workflow could be connected to live security feeds and scalable correlation services. AI assistance could also be added for tasks such as processing unstructured intelligence and generating or refining BLUF summaries, while keeping human analysts responsible for investigation decisions.
+
 
 
