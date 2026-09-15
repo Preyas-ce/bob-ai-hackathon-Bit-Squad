@@ -1,121 +1,60 @@
-# 🚀 [Your Project Title Here]
+# Defence Threat Intelligence
 
-> ⚠️ **Replace everything in `[ ]` brackets with your actual content before submission.**
-
----
-
-## 👥 Team
+## Team
 
 | Field | Value |
 |---|---|
-| **Team Name** | [Your Team Name] |
-| **Track** | [AI / DevOps / Sustainability / Open] |
-| **Team Lead** | [Name] — [email@ibm.com] |
-| **Members** | [Name 1], [Name 2], [Name 3] |
+| Team Name | Bit Squad |
+| Track | AI |
+| Team Lead | Dhruvit Ramani - 26ce086@charusat.edu.in |
+| Members | Preyas Patel, Zenil Sorathiya, Meet Panasuriya |
 
 ---
 
-## 🎯 Problem Statement
+## Problem Statement
 
-> In 2–3 sentences: What problem does your project solve? Who experiences this problem?
-
-[Describe the real-world problem your project addresses. Be specific about who the user is and what pain point they face.]
+Defence and security teams receive thousands of alerts every day from different sources such as SIEM systems, cyber sensors, and intelligence reports. Analysts must identify related threats, prioritize genuine incidents, and investigate possible false positives while commanders need a clear summary of the most important threats.
 
 ---
 
-## 💡 Solution
+## Solution
 
-> In 2–3 sentences: What did you build? How does it solve the problem above?
+Defence Threat Intelligence is an analyst-focused dashboard that groups related alerts, calculates an explainable threat priority score, maps relevant activity to MITRE ATT&CK techniques, and presents investigation findings through evidence, timelines, and BLUF summaries.
 
-[Describe your solution clearly. Explain the core mechanism — what makes it work.]
-
----
-
-## ✨ Key Features
-
-- **Feature 1:** [Brief description — e.g., "Real-time anomaly detection using watsonx.ai"]
-- **Feature 2:** [Brief description]
-- **Feature 3:** [Brief description]
-- **Feature 4:** [Optional]
-- **Feature 5:** [Optional]
+The prototype demonstrates how a large number of security alerts can be turned into a smaller set of prioritized investigations while keeping the reasoning visible to the analyst.
 
 ---
 
-## 🛠️ Tech Stack
+## Key Features
+
+- Explainable threat priority scoring
+- Alert correlation and supporting evidence
+- MITRE ATT&CK technique mapping
+- BLUF investigation summaries
+- Investigation timeline and suggested investigation starting points
+- Possible false-positive indication
+
+---
+
+## Tech Stack
 
 | Category | Technologies |
 |---|---|
-| **Languages** | [e.g., Python, TypeScript] |
-| **Frameworks** | [e.g., FastAPI, React] |
-| **IBM Technologies** | [e.g., watsonx.ai, IBM Bob, IBM Cloud] |
-| **Databases** | [e.g., PostgreSQL, Redis] |
-| **Other** | [e.g., Docker, GitHub Actions] |
+| Languages | TypeScript |
+| Frameworks | React, Vite, Tailwind CSS |
+| IBM Technologies | IBM Bob |
+| Databases | None |
+| Other | Git, GitHub |
 
 ---
 
-## 📁 Repository Structure
+## How to Run
 
-```
-├── src/                  # All source code
-├── docs/                 # Written documentation
-│   ├── problem-statement.md
-│   ├── solution-overview.md
-│   ├── architecture.md
-│   └── setup-guide.md
-├── demo/                 # Demo artifacts
-│   ├── screenshots/      # App screenshots
-│   └── demo-video-link.txt  # Link to demo video
-├── presentation/         # Slide deck
-└── submission.yaml       # Structured submission metadata
-```
-
----
-
-## ⚡ How to Run
-
-> **Copy these exact steps from your [`docs/setup-guide.md`](docs/setup-guide.md)**
+Follow the setup guide in docs/setup-guide.md.
 
 ```bash
-# 1. Clone the repo
-git clone https://github.com/[your-repo].git
-cd [your-repo]
+git clone https://github.com/Preyas-ce/bob-ai-hackathon-Bit-Squad.git
+cd bob-ai-hackathon-Bit-Squad
+npm install
+npm run dev
 
-# 2. Install dependencies
-[your install command here]
-
-# 3. Configure environment
-cp .env.example .env
-# Edit .env with your values
-
-# 4. Run the project
-[your run command here]
-```
-
----
-
-## 🖥️ Demo
-
-| Artifact | Link |
-|---|---|
-| 📹 Demo Video | [See demo/demo-video-link.txt](demo/demo-video-link.txt) |
-| 🌐 Live Demo | [See demo/live-demo-url.txt](demo/live-demo-url.txt) |
-| 🖼️ Screenshots | [See demo/screenshots/](demo/screenshots/) |
-| 📊 Presentation | [See presentation/slides.pdf](presentation/) |
-
----
-
-## ⚠️ Known Limitations
-
-> Be honest — judges appreciate transparency over overclaiming.
-
-- [Limitation 1: e.g., "Authentication is mocked — not production-ready"]
-- [Limitation 2: e.g., "Only tested on Chrome"]
-- [Limitation 3: e.g., "Feature X is scaffolded but not fully implemented"]
-
----
-
-## 🏅 What We're Most Proud Of
-
-[Tell the judges what part of your submission is strongest and worth paying close attention to.]
-
----
