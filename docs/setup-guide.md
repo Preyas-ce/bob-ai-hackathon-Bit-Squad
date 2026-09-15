@@ -1,79 +1,124 @@
 # Setup Guide
 
-> **This file is read by the automated evaluation pipeline. Be precise and complete.**
-
 ## Prerequisites
 
-Before you begin, ensure you have the following installed:
+Before running the project, make sure the following are installed:
 
-- [ ] [e.g., Python 3.11+]
-- [ ] [e.g., Node.js 18+]
-- [ ] [e.g., Docker Desktop]
-- [ ] [e.g., An IBM Cloud account with watsonx.ai access]
+* Node.js 18 or newer
+* npm
+* Git
+
+No backend, database, or external API credentials are required for the current prototype.
+
+## Clone the Repository
+
+```bash
+git clone https://github.com/Preyas-ce/bob-ai-hackathon-Bit-Squad.git
+cd bob-ai-hackathon-Bit-Squad
+```
+
+## Install Dependencies
+
+```bash
+npm install
+```
+
+## Run the Application
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Vite will display the local development URL. Normally, the application is available at:
+
+`http://localhost:5173/`
+
+Open the URL in a web browser.
+
+## Production Build
+
+To verify that the application can be built successfully:
+
+```bash
+npm run build
+```
+
+The production files are generated in the `dist/` directory.
 
 ## Environment Variables
 
-Copy `.env.example` to `.env` and fill in the values:
+The current prototype does not require environment variables.
 
-```bash
-cp .env.example .env
-```
+There are no API keys, database credentials, or external service credentials required to run the application.
 
-| Variable | Description | Required |
-|---|---|---|
-| `WATSONX_API_KEY` | Your IBM watsonx.ai API key | Yes |
-| `WATSONX_PROJECT_ID` | Your watsonx.ai project ID | Yes |
-| `DATABASE_URL` | PostgreSQL connection string | Yes |
-| `SLACK_WEBHOOK_URL` | Slack webhook for alerts | No |
+## Prototype Data
 
-## Installation
+The application currently uses structured fictional threat data included in the frontend.
 
-```bash
-# 1. Clone the repository
-git clone https://github.com/[your-org]/[your-repo].git
-cd [your-repo]
+The prototype demonstrates the intended analyst workflow without connecting to real SIEM systems, live threat feeds, military infrastructure, or external AI services.
 
-# 2. Install backend dependencies
-[your command — e.g.: pip install -r requirements.txt]
+## Quick Demo
 
-# 3. Install frontend dependencies (if applicable)
-[your command — e.g.: cd frontend && npm install]
+After starting the application:
 
-# 4. Set up the database (if applicable)
-[your command — e.g.: python manage.py migrate]
-```
-
-## Running the Application
-
-```bash
-# Start the backend
-[your command — e.g.: uvicorn app.main:app --reload]
-
-# Start the frontend (in a separate terminal, if applicable)
-[your command — e.g.: cd frontend && npm run dev]
-```
-
-The application will be available at: `http://localhost:[PORT]`
-
-## Running Tests
-
-```bash
-[your test command — e.g.: pytest tests/ -v]
-```
-
-## Quick Demo (Optional)
-
-If you have a demo script or sample data to showcase the project quickly:
-
-```bash
-[e.g.: python demo/seed_demo_data.py]
-[e.g.: open http://localhost:8000/demo]
-```
+1. Open the dashboard.
+2. Review the incident summary cards.
+3. Select `INC-001`.
+4. Review its threat priority score.
+5. Expand the score factors to understand why the incident was prioritized.
+6. Expand the correlation evidence.
+7. Review the investigation timeline.
+8. Review the MITRE ATT&CK mappings.
+9. Read the BLUF summary.
+10. Return to the dashboard and use the severity filters.
 
 ## Troubleshooting
 
-| Issue | Solution |
-|---|---|
-| [e.g., `ModuleNotFoundError`] | [e.g., Run `pip install -r requirements.txt` again] |
-| [e.g., Database connection refused] | [e.g., Ensure PostgreSQL is running: `docker compose up db`] |
-| [e.g., watsonx.ai 401 error] | [e.g., Check `WATSONX_API_KEY` in your `.env` file] |
+### `npm` is not recognized
+
+Install Node.js and restart the terminal or command prompt.
+
+### Dependencies are missing
+
+Run:
+
+```bash
+npm install
+```
+
+from the project root.
+
+### Port 5173 is already in use
+
+Stop the other Vite development server using the port, or use the alternate local URL displayed by Vite.
+
+### Production build fails
+
+Make sure the dependencies are installed:
+
+```bash
+npm install
+```
+
+Then run:
+
+```bash
+npm run build
+```
+
+## Current Scope
+
+This is a prototype using structured fictional threat data.
+
+It does not currently connect to:
+
+* Real SIEM systems
+* Live threat intelligence feeds
+* Military infrastructure
+* External databases
+* External AI services
+
+The correlation evidence, confidence values, and MITRE ATT&CK mappings are simulated to demonstrate the intended production workflow.
+
