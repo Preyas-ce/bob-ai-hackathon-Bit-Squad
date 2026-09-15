@@ -1,49 +1,195 @@
 # Architecture
 
-## System Architecture
 
-[Describe the overall architecture of your system. Replace the Mermaid diagram below with your actual architecture.]
 
-```mermaid
-graph TD
-    A[User / Browser] -->|HTTP| B[Frontend - React]
-    B -->|REST API| C[Backend - FastAPI]
-    C -->|SDK| D[watsonx.ai]
-    C -->|Query| E[PostgreSQL]
-    C -->|Publish| F[Slack Webhook]
-    D -->|Inference Result| C
-```
+## Overview
 
-## Components
 
-| Component | Technology | Responsibility |
-|---|---|---|
-| Frontend | [e.g., React 18] | [e.g., Dashboard UI, user interaction] |
-| Backend API | [e.g., FastAPI] | [e.g., Business logic, orchestration] |
-| AI / ML | [e.g., watsonx.ai] | [e.g., Anomaly scoring, classification] |
-| Database | [e.g., PostgreSQL] | [e.g., Storing pipeline events and scores] |
-| Notifications | [e.g., Slack API] | [e.g., Alerting on threshold breaches] |
+
+Defence Threat Intelligence is a frontend-focused prototype that demonstrates how security alerts can be transformed into prioritized and explainable investigations.
+
+
+
+The current implementation uses structured fictional threat data inside the React application. It does not require a backend, external database, live security feeds, or external AI services.
+
+
+
+## Architecture Components
+
+
+
+### 1. React Dashboard
+
+
+
+The React application provides the main analyst interface.
+
+
+
+It contains:
+
+
+
+- Incident summary cards
+
+- Severity filters
+
+- Prioritized incident cards
+
+- Investigation drawer
+
+- Threat score explanation
+
+- Correlation evidence
+
+- Event timeline
+
+- MITRE ATT&CK context
+
+- BLUF summary
+
+- Possible false-positive indication
+
+
+
+### 2. Structured Threat Data
+
+
+
+The prototype uses structured TypeScript data to represent fictional security incidents and their supporting alerts.
+
+
+
+Each incident can contain:
+
+
+
+- Incident ID
+
+- Severity
+
+- Confidence
+
+- Threat score inputs
+
+- Supporting alerts
+
+- Timestamps
+
+- Source information
+
+- MITRE ATT&CK mappings
+
+- BLUF investigation information
+
+
+
+This allows the prototype to demonstrate the intended investigation workflow without connecting to real security systems.
+
+
+
+### 3. Threat Scoring Engine
+
+
+
+The prototype calculates a deterministic threat priority score using predefined scoring factors.
+
+
+
+The score considers information such as:
+
+
+
+- Incident severity
+
+- Confidence
+
+- Number and relevance of supporting evidence
+
+
+
+The score is calculated locally and the contributing factors are displayed to the analyst.
+
+
+
+This makes the prioritization explainable rather than presenting an unexplained prediction.
+
+
+
+### 4. Investigation View
+
+
+
+When an analyst selects an incident, the investigation drawer presents the available investigation context in one place.
+
+
+
+The analyst can review:
+
+
+
+1\. Priority score
+
+2\. Score factors
+
+3\. Correlation evidence
+
+4\. Event timeline
+
+5\. MITRE ATT&CK techniques
+
+6\. BLUF summary
+
+7\. Possible false-positive indication
+
+
 
 ## Data Flow
 
-[Describe how data moves through your system from input to output.]
 
-1. [e.g., Pipeline logs are ingested via a webhook from GitHub Actions]
-2. [e.g., Logs are preprocessed and chunked into 512-token segments]
-3. [e.g., Each chunk is sent to the watsonx.ai inference endpoint]
-4. [e.g., Anomaly scores are stored in PostgreSQL]
-5. [e.g., The React dashboard polls the API every 30 seconds to refresh]
 
-## Security Considerations
+The current prototype follows this flow:
 
-[Note any security decisions relevant to the architecture — even if basic.]
 
-- [e.g., API keys stored in environment variables, never committed to git]
-- [e.g., All API routes require a Bearer token]
-- [e.g., Database credentials rotated via IBM Secrets Manager]
 
-## Scalability Notes
+```text
 
-[Optional: how would this scale beyond the hackathon prototype?]
+Structured fictional threat data
 
-[e.g., "The FastAPI backend is stateless and could be horizontally scaled behind a load balancer. The watsonx.ai calls are the bottleneck and would benefit from request batching."]
+&#x20;           |
+
+&#x20;           v
+
+&#x20;    Incident grouping
+
+&#x20;           |
+
+&#x20;           v
+
+&#x20;  Deterministic scoring
+
+&#x20;           |
+
+&#x20;           v
+
+&#x20;  Prioritized incidents
+
+&#x20;           |
+
+&#x20;           v
+
+&#x20;  Analyst investigation
+
+&#x20;     /      |       \\
+
+&#x20;    v       v        v
+
+&#x20;Evidence  Timeline  MITRE context
+
+&#x20;           |
+
+&#x20;           v
+
+&#x20;       BLUF summary
+
+
