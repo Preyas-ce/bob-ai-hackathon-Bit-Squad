@@ -1,8 +1,8 @@
-\# Problem Statement
+# Problem Statement
 
 
 
-\## Background
+## Background
 
 
 
@@ -10,7 +10,7 @@ Defence and security teams receive large volumes of alerts from different source
 
 
 
-\## The Problem
+## The Problem
 
 
 
@@ -22,7 +22,7 @@ At the same time, commanders and decision-makers do not need to read every techn
 
 
 
-\## Who is Affected
+## Who is Affected
 
 
 
@@ -34,7 +34,7 @@ Commanders and decision-makers are also affected because they need concise, unde
 
 
 
-\## Why It Matters
+## Why It Matters
 
 
 
@@ -42,7 +42,7 @@ Alert overload can make investigations slower and can cause important activity t
 
 
 
-\## Why Existing Workflows Fall Short
+## Why Existing Workflows Fall Short
 
 
 
@@ -54,13 +54,14 @@ Our project addresses this workflow gap by bringing these investigation steps to
 
 
 
-\## Prototype Scope
+## Prototype Scope
 
 
 
-The current submission is a prototype using structured fictional threat data. It demonstrates alert correlation, explainable priority scoring, supporting evidence, MITRE ATT\&CK context, investigation timelines, possible false-positive indication, and BLUF summaries.
+The current submission is a prototype using structured fictional threat data. It demonstrates alert correlation, explainable priority scoring, supporting evidence, MITRE ATT&CK context, investigation timelines, possible false-positive indication, and BLUF summaries.
 
 
 
 It does not connect to real SIEM systems, live intelligence feeds, or military infrastructure.
+
 
