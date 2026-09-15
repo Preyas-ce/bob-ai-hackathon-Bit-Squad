@@ -1,0 +1,66 @@
+
+team:
+  name: "Bit Squad"
+  track: "AI"
+  lead:
+    name: "Dhruvit Ramani"
+    email: "26ce086@charusat.edu.in"
+  members:
+    - name: "Preyas Patel"
+      email: "26ce071@charusat.edu.in"
+    - name: "Zenil Sorathiya"
+      email: "26ce104@charusat.edu.in"
+    - name: "Meet Panasuriya"
+      email: "26ce052@charusat.edu.in"
+
+submission:
+  title: "Defence Threat Intelligence"
+
+  problem_statement: >
+    Defence and security teams receive thousands of alerts every day from
+    different sources such as SIEM systems, cyber sensors, and intelligence
+    reports. Analysts must identify related threats, prioritize genuine
+    incidents, and investigate possible false positives while commanders
+    need a clear summary of the most important threats.
+
+  solution_summary: >
+    Defence Threat Intelligence is an analyst-focused dashboard that groups
+    related alerts, calculates an explainable threat priority score, maps
+    relevant activity to MITRE ATT&CK techniques, and presents investigation
+    findings through evidence, timelines, and BLUF summaries.
+
+  key_features:
+    - "Explainable threat priority scoring"
+    - "Alert correlation and supporting evidence"
+    - "MITRE ATT&CK technique mapping"
+    - "BLUF commander-ready investigation summaries"
+    - "Possible false-positive indication and investigation workflow"
+
+  tech_stack:
+    languages: ["TypeScript"]
+    frameworks: ["React", "Vite", "Tailwind CSS"]
+    ibm_technologies: ["IBM Bob"]
+    databases: []
+    other: ["GitHub"]
+
+  what_we_are_most_proud_of: >
+    We are most proud of building an analyst-focused workflow that does not
+    only prioritize incidents, but also explains why an incident received
+    its score and provides the evidence, timeline, MITRE ATT&CK context,
+    and BLUF summary needed for further investigation.
+
+  known_limitations: >
+    This is a prototype using structured fictional threat data. It does not
+    connect to real SIEM systems, live threat feeds, or military
+    infrastructure. Alert correlation evidence, confidence values, and
+    MITRE mappings are currently simulated to demonstrate the intended
+    production workflow.
+
+artifacts:
+  source_code: "src/"
+  setup_guide: "docs/setup-guide.md"
+  architecture_doc: "docs/architecture.md"
+  demo_video: "demo/demo-video-link.txt"
+  live_demo: "demo/live-demo-url.txt"
+  screenshots: "demo/screenshots/"
+  presentation: "presentation/"
